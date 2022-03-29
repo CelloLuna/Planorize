@@ -1,11 +1,12 @@
-# Calendar   
+# Folder Descriptions
+## Calendar
 - Code for the calendar  
 
-# Documents  
+## Documents
 - Shared documents to turn in  
 
-# FunFeatures  
+## FunFeatures  
 - Code for other features like word of the day or colors  
 
-# ToDo
+## ToDo
 - Code for the To Do list
