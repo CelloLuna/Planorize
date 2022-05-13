@@ -20,26 +20,13 @@
         <link href="css/sb-admin-2.min.css" rel="stylesheet" />
         <!-- My CSS -->
         <link href="css/mystyles.css" rel="stylesheet" />
-
-        <script>
-            //var nav = document.getElementById("nav");
-            
-            document.getElementById("nav").style.color = "green";
-
-            // function navHide() {
-            //     if ("<?php echo $pageTitle?>" == "Login") {
-            //         nav.hidden = true;
-            //     }
-            // }   
-            // navHide();
-        </script>
     </head>
 
     <body id="page-top" class="d-flex flex-column min-vh-100">
         <!-- Topbar -->
         <nav id="nav" class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow">
 
-            <!-- Topbar Search -->
+            <!-- Page Title and Home -->
             <form
                 class="d-none d-sm-inline-block form-inline mr-auto ml-md-3 my-2
                 my-md-0 mw-100 navbar-search">
