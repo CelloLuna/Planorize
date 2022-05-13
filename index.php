@@ -1,9 +1,9 @@
 <?php 
 
-//Database and core connection commented until added
-//include 'config/core.php'
+//Database and core connection
+include 'config/core.php';
 
-//include 'config/database.php'
+include 'config/database.php';
 
 //page title and header
 $pageTitle = "Home";

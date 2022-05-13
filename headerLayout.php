@@ -20,6 +20,7 @@
         <link href="css/sb-admin-2.min.css" rel="stylesheet" />
         <!-- My CSS -->
         <link href="css/mystyles.css" rel="stylesheet" />
+        <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script> 
     </head>
 
     <body id="page-top" class="d-flex flex-column min-vh-100">
