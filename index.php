@@ -1,8 +1,18 @@
 <?php 
-// include dbName
 
+//Database and core connection commented until added
+//include 'config/core.php'
+
+//include 'config/database.php'
+
+//page title and header
+$pageTitle = "Home";
 include_once "headerLayout.php";
-include_once "homeLayout.php";
-include_once "footLayout.php";
+
+
+include_once "indexLayout.php";
+
+
+include_once "footerLayout.php";
 
 ?>

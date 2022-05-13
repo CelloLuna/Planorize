@@ -7,9 +7,11 @@
         <meta name="Layout for the head of every page" content="" />
         <meta name="Marcello" content="" />
 
+        <!-- Page title based on php variable -->
+        <title><?php echo isset($pageTitle) ? $pageTitle : " "; ?></title>
+
         <!-- Custom fonts for this template-->
         <link
-<<<<<<< HEAD
             href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css"/>
         <link
             href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet"/>
@@ -18,29 +20,32 @@
         <link href="css/sb-admin-2.min.css" rel="stylesheet" />
         <!-- My CSS -->
         <link href="css/mystyles.css" rel="stylesheet" />
+
+        <script>
+            //var nav = document.getElementById("nav");
+            
+            document.getElementById("nav").style.color = "green";
+
+            // function navHide() {
+            //     if ("<?php echo $pageTitle?>" == "Login") {
+            //         nav.hidden = true;
+            //     }
+            // }   
+            // navHide();
+        </script>
     </head>
 
-    <body>
+    <body id="page-top" class="d-flex flex-column min-vh-100">
         <!-- Topbar -->
-        <nav
-            class="navbar navbar-expand navbar-light bg-white topbar mb-4
-            static-top shadow">
-            <!-- Sidebar Toggle (Topbar) -->
-            <button
-                id="sidebarToggleTop"
-                class="btn btn-link d-md-none rounded-circle mr-3">
-                <i class="fa fa-bars"></i>
-            </button>
+        <nav id="nav" class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow">
 
             <!-- Topbar Search -->
             <form
                 class="d-none d-sm-inline-block form-inline mr-auto ml-md-3 my-2
                 my-md-0 mw-100 navbar-search">
-<<<<<<< HEAD
                 <i class="fas fa-solid fa-home fa-2x" style="color: #232066;"></i>
->>>>>>> origin/Alpha
-                
             </form>
+            <h1 class="p-5 text-center"><?php  echo isset($pageTitle) ? $pageTitle : " "; ?></h1>
 
             <!-- Topbar Navbar -->
             <ul class="navbar-nav ml-auto">
@@ -137,3 +142,4 @@
             </ul>
         </nav>
         <!-- End of Topbar -->
+    
