@@ -1,4 +1,5 @@
 <?php
+$pageTitle = "Calendar";
 include_once "headerLayout.php";
 ?>
 
@@ -9,15 +10,15 @@ include_once "headerLayout.php";
                     <div class="row">
                         <div class="container">
                             <div class="page-header">
-                                <h3></h3>
+                                <h3 class="hStyle"></h3>
 
                             </div>
                             <div class="row">
-                                <div class="col-md-9">
+                                <div class="col-md-9 calBox">
                                     <div id="showEventCalendar"></div>
                                 </div>
                                 <div class="col-md-3">
-                                    <h4>All Events List</h4>
+                                    <h4 class="hStyle">All Events List</h4>
                                     <ul id="eventlist" class="nav nav-list"></ul>
                                 </div>
                             </div>

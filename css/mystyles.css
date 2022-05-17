@@ -15,6 +15,13 @@ body {
     color: #232066;
 }
 
+.calBox {
+    background-color: white;
+}
+
+.hStyle {
+    color: black;
+}
 /* 
 Box Background: D6E3F8
 Box Border: 0852C9
