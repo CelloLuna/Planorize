@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 <?php
 $host = "173.201.186.254";
 $dbName = "planorize";
