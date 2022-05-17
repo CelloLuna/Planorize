@@ -10,21 +10,21 @@
         $userName = $_POST['username'];
 
         //password hashing
-        $password = $_POST['password'];
+        $password = $_POST['pass'];
         $options = ['cost' => 12];
         $hashedPass = password_hash($password, PASSWORD_BCRYPT, $options);
 
         //query for user and email validation
         $ret = "SELECT * FROM Users where (Username=:username || Email=:email)";
-        $queryt = $dbh->prepare($ret);
-        $queryt = bindParam(':email', $Email, PDO::PARAM_STR);
-        $queryt = bindParam(':username', $userName, PDO::PARAM_STR);
-        $queryt = execute();
+        $queryt = $con->prepare($ret);
+        $queryt -> bindParam(':email', $Email, PDO::PARAM_STR);
+        $queryt -> bindParam(':username', $userName, PDO::PARAM_STR);
+        $queryt -> execute();
         $results = $queryt->fetchAll(PDO::FETCH_OBJ);
-        if ($queryt->rowCount(0) == 0) {
-            //Suery for insertion
-            $sql = "INSERT INTO user(FirstName,LastName,Password,Username,Email,PhoneNumber,DateOfBirth) VALUES (:fname,:lname,:pass,:username,:email,:phone,:dob";
-            $query = $dbh->prepare($sql);
+        if ($queryt->rowCount() == 0) {
+            //Query for insertion
+            $sql = "INSERT INTO Users(FirstName,LastName,Password,Username,Email,PhoneNumber,DateOfBirth) VALUES (:fname,:lname,:pass,:username,:email,:phone,:dob";
+            $query = $con->prepare($sql);
 
             //binding post values
             $query->bindParam(':fname', $fName, PDO::PARAM_STR);
@@ -34,14 +34,18 @@
             $query->bindParam(':email', $Email, PDO::PARAM_STR);
             $query->bindParam(':phone', $Phone, PDO::PARAM_STR);
             $query->bindParam(':dob', $dOb, PDO::PARAM_STR);
-            $lastInsertId = $dbh->lastInsertId();
+            $lastInsertId = $con->lastInsertId();
             if ($lastInsertId) {
                 $msg = "You Have Registered Successfully";
+                echo $msg;
+                header("Location: index.php?action=success");
             } else {
                 $error = "Something Went Wrong. Please Try Again";
+                echo $error;
             }
         } else {
             $error = "Username or Email Already Exists. Please Try Again";
+            echo $error;
         }
     }
 ?>
@@ -100,7 +104,7 @@
                 <div class="text-center">
                             <h1 class="h4 text-gray-900 mb-4"><?php  echo isset($pageTitle) ? $pageTitle : " "; ?></h1>
                         </div>
-                        <form class="user">
+                        <form class="user" action='' method="post">
                             <!-- Name Inputs -->
                             <div class="form-group row">
                                 <div class="col-sm-6 mb-3 mb-sm-0">

@@ -1,6 +1,23 @@
 body {
     background-color: #b1c5e6;
 }
-nav {
-    background-color: #b1c5e6;
+
+.navClass, .footerClass {
+    background-color: white !important;
 }
+
+.card {
+    border: 3px solid #0852C9;
+    background-color: #D6E3F8;
+}
+
+.iconClass {
+    color: #232066;
+}
+
+/* 
+Box Background: D6E3F8
+Box Border: 0852C9
+Background background: B1C5E6
+icon color: 232066 
+*/

@@ -18,20 +18,22 @@
 
         <!-- Custom styles for this template-->
         <link href="css/sb-admin-2.min.css" rel="stylesheet" />
+        
         <!-- My CSS -->
-        <link href="css/mystyles.css" rel="stylesheet" />
+        <link href="css/mystyles.css" rel="stylesheet" type="text/css"/>
+
         <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script> 
     </head>
 
     <body id="page-top" class="d-flex flex-column min-vh-100">
         <!-- Topbar -->
-        <nav id="nav" class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow">
+        <nav id="nav" class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow navClass">
 
             <!-- Page Title and Home -->
             <form
                 class="d-none d-sm-inline-block form-inline mr-auto ml-md-3 my-2
                 my-md-0 mw-100 navbar-search">
-                <i class="fas fa-solid fa-home fa-2x" style="color: #232066;"></i>
+                <a href="index.php"><i class="fas fa-solid fa-home fa-2x iconClass"></i></a>
             </form>
             <h1 class="p-5 text-center"><?php  echo isset($pageTitle) ? $pageTitle : " "; ?></h1>
 
@@ -42,13 +44,13 @@
                 <li class="nav-item dropdown no-arrow mx-1">
                     <a
                         class="nav-link dropdown-toggle"
-                        href="#"
+                        href="calendar.php"
                         id="alertsDropdown"
                         role="button"
                         data-toggle="dropdown"
                         aria-haspopup="true"
                         aria-expanded="false">
-                        <i class="fas fa-solid fa-calendar-day fa-2x" style="color:blue;"></i>
+                        <i class="fas fa-solid fa-calendar-day fa-2x iconClass"></i>
                     </a>
                 </li>
 
@@ -56,27 +58,27 @@
                 <li class="nav-item dropdown no-arrow mx-1">
                     <a
                         class="nav-link dropdown-toggle"
-                        href="#"
+                        href="todo.php"
                         id="alertsDropdown"
                         role="button"
                         data-toggle="dropdown"
                         aria-haspopup="true"
                         aria-expanded="false">
-                        <i class="fas fa-solid fa-clipboard-check fa-2x" style="color:blue;"></i>
+                        <i class="fas fa-solid fa-clipboard-check fa-2x iconClass" ></i>
                     </a>
                 </li>
 
-                <!-- Nav Item - CLOCK -->
+                <!-- Nav Item - Reminders -->
                 <li class="nav-item dropdown no-arrow mx-1">
                     <a
                         class="nav-link dropdown-toggle"
-                        href="#"
+                        href="reminders.php"
                         id="messagesDropdown"
                         role="button"
                         data-toggle="dropdown"
                         aria-haspopup="true"
                         aria-expanded="false">
-                        <i class="fas fa-regular fa-clock fa-2x" style="color: blue;"></i>
+                        <i class="fas fa-regular fa-clock fa-2x iconClass"></i>
                     </a>
                 </li>
 
@@ -86,15 +88,14 @@
                 <li class="nav-item dropdown no-arrow">
                     <a
                         class="nav-link dropdown-toggle"
-                        href="#"
+                        href="login.php"
                         id="userDropdown"
                         role="button"
                         data-toggle="dropdown"
                         aria-haspopup="true"
                         aria-expanded="false">
-                        <span class="mr-2 d-none d-lg-inline text-gray-600
-                            small">User ID php</span>
-                            <i class="fas fa-solid fa-user fa-2x" style="color: blue;"></i>
+                        <i class="fas fa-solid fa-user fa-2x iconClass"></i>
+                    </a>
                     <!-- Dropdown - User Information -->
                     <div
                         class="dropdown-menu dropdown-menu-right shadow

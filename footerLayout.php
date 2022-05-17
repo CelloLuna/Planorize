@@ -1,4 +1,4 @@
-        <footer class="sticky-footer bg-white mt-auto">
+        <footer class="sticky-footer bg-white mt-auto footerClass">
                 <div class="container my-auto">
                     <div class="copyright text-center my-auto">
                         <span>Copyright &copy; Your Website 2021</span>

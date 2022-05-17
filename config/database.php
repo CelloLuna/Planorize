@@ -1,16 +1,16 @@
 <?php
-// used to connect to the database
-$host = "localhost";
-$db_name = "planorize";
-$username = "bwz4170mpz0q";
-$password = "Cweb-1113";
-
-try {
-	$con = new PDO("mysql:host={$host};dbname={$db_name}", $username, $password);
+$host = "173.201.186.254";
+$dbName = "planorize";
+$userName = "caytlin";
+$password = "Sherlock321!";
+try
+{
+	$con = new PDO("mysql:host={$host};dbname={$dbName}",$userName, $password);
+	#echo "Connection Successful";
 }
 
-// to handle connection error
-catch(PDOException $exception){
-	echo "Connection error: " . $exception->getMessage();
+catch (Exception $e)
+{
+	echo "Connection Error:". $e -> getMessage();
 }
 ?>
