@@ -6,96 +6,95 @@
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
         <meta name="Layout for the head of every page" content="" />
         <meta name="Marcello" content="" />
-
-        <!-- Page title based on php variable -->
-        <title><?php echo isset($pageTitle) ? $pageTitle : " "; ?></title>
-
         <!-- Custom fonts for this template-->
+        <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css"/>
         <link
-            href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css"/>
-        <link
-            href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet"/>
-
+            href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
+            rel="stylesheet"/>
         <!-- Custom styles for this template-->
         <link href="css/sb-admin-2.min.css" rel="stylesheet" />
-        
-        <!-- My CSS -->
-        <link href="css/mystyles.css" rel="stylesheet" type="text/css"/>
 
-        <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script> 
+            
+        <link rel="stylesheet" href="css/calendar.css">
+        <link rel="stylesheet" href="css/calendar.min.css">
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
     </head>
-
-    <body id="page-top" class="d-flex flex-column min-vh-100">
+    
+    <body>
         <!-- Topbar -->
-        <nav id="nav" class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow navClass">
-
-            <!-- Page Title and Home -->
+        <nav
+            class="navbar navbar-expand navbar-light bg-white topbar mb-4
+            static-top shadow">
+            <!-- Sidebar Toggle (Topbar) -->
+            <button
+                id="sidebarToggleTop"
+                class="btn btn-link d-md-none rounded-circle mr-3">
+                <i class="fa fa-bars"></i>
+            </button>
+            <!-- Topbar Search -->
             <form
                 class="d-none d-sm-inline-block form-inline mr-auto ml-md-3 my-2
                 my-md-0 mw-100 navbar-search">
-                <a href="index.php"><i class="fas fa-solid fa-home fa-2x iconClass"></i></a>
+                <i class="fas fa-solid fa-home fa-2x" style="color: blue;"></i>
+                
             </form>
-            <h1 class="p-5 text-center"><?php  echo isset($pageTitle) ? $pageTitle : " "; ?></h1>
-
             <!-- Topbar Navbar -->
             <ul class="navbar-nav ml-auto">
-
                 <!-- Nav Item - Calendar -->
                 <li class="nav-item dropdown no-arrow mx-1">
                     <a
                         class="nav-link dropdown-toggle"
-                        href="calendar.php"
+                        href="#"
                         id="alertsDropdown"
                         role="button"
                         data-toggle="dropdown"
                         aria-haspopup="true"
                         aria-expanded="false">
-                        <i class="fas fa-solid fa-calendar-day fa-2x iconClass"></i>
+                        <i class="fas fa-solid fa-calendar-day fa-2x" style="color:blue;"></i>
                     </a>
                 </li>
-
                 <!-- Nav Item - TODO -->
                 <li class="nav-item dropdown no-arrow mx-1">
                     <a
                         class="nav-link dropdown-toggle"
-                        href="todo.php"
+                        href="#"
                         id="alertsDropdown"
                         role="button"
                         data-toggle="dropdown"
                         aria-haspopup="true"
                         aria-expanded="false">
-                        <i class="fas fa-solid fa-clipboard-check fa-2x iconClass" ></i>
+                        <i class="fas fa-solid fa-clipboard-check fa-2x" style="color:blue;"></i>
                     </a>
                 </li>
-
-                <!-- Nav Item - Reminders -->
+                <!-- Nav Item - CLOCK -->
                 <li class="nav-item dropdown no-arrow mx-1">
                     <a
                         class="nav-link dropdown-toggle"
-                        href="reminders.php"
+                        href="#"
                         id="messagesDropdown"
                         role="button"
                         data-toggle="dropdown"
                         aria-haspopup="true"
                         aria-expanded="false">
-                        <i class="fas fa-regular fa-clock fa-2x iconClass"></i>
+                        <i class="fas fa-regular fa-clock fa-2x" style="color: blue;"></i>
                     </a>
                 </li>
-
                 <div class="topbar-divider d-none d-sm-block"></div>
-
                 <!-- Nav Item - User Information -->
                 <li class="nav-item dropdown no-arrow">
                     <a
                         class="nav-link dropdown-toggle"
-                        href="login.php"
+                        href="#"
                         id="userDropdown"
                         role="button"
                         data-toggle="dropdown"
                         aria-haspopup="true"
                         aria-expanded="false">
-                        <i class="fas fa-solid fa-user fa-2x iconClass"></i>
-                    </a>
+                        <span class="mr-2 d-none d-lg-inline text-gray-600
+                            small">User ID php</span>
+                            <i class="fas fa-solid fa-user fa-2x" style="color: blue;"></i>
                     <!-- Dropdown - User Information -->
                     <div
                         class="dropdown-menu dropdown-menu-right shadow
